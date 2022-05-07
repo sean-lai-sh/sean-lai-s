@@ -4,11 +4,11 @@
   }
   
   .app__whitebg {
-    background-color: var(--black-color);
+    background-color: var(--dark-gray-color);
   }
   
   .app__primarybg {
-    background-color: var(--primary-color);
+    background-color: var(--black-color);
   }
   
   .app__container {
@@ -17,6 +17,7 @@
   
     display: flex;
     flex-direction: row;
+    transition:ease-in-out;
   }
   
   .app__flex {

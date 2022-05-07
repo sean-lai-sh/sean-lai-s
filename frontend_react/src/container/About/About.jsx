@@ -3,7 +3,7 @@ import './About.scss'
 import {motion} from 'framer-motion';
 
 import {client, urlFor} from '../../client'
-import {AppWrap} from '../../wrapper';
+import {AppWrap, motionWrap} from '../../wrapper';
 
 const About = () => {
   const [abouts,setAbouts] = useState([]);
@@ -25,7 +25,7 @@ const About = () => {
           key={about.title + index}>
             <img src={urlFor(about.imgUrl)} alt={about.title}/>
             <h3 className='bold-text' style={{marginTop:20}}>{about.title}</h3>
-            <p className='p-text' style={{marginTop:10}}>{about.description} and some test text</p>
+            <p className='p-text' style={{marginTop:10}}>{about.description}</p>
 
 
           </motion.div>
@@ -37,4 +37,4 @@ const About = () => {
   )
 }
 
-export default AppWrap(About,'about');
+export default AppWrap(motionWrap(About,'app__about'),'about',"app__whitebg");
